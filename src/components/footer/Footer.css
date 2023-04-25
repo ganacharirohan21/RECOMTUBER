@@ -1,0 +1,29 @@
+.footer {
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 40px;
+  }
+  
+  .footer a {
+    color: #fff;
+  }
+  
+  .footer a:hover {
+    color: #0077b5;
+  }
+  
+  .footer p {
+    margin-bottom: 0;
+  }
+  
+  .icon {
+    font-size: 25px;
+    margin-left: 20px;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .icon:hover {
+    color: #0077b5;
+  }
+  

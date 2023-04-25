@@ -1,38 +1,471 @@
-.App {
-  text-align: center;
+body,html{
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.homeland img{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 0%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.imgtext h1{
+    display: flex;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    transform: translate(-20%, -10%);
+    color: rgb(255, 255, 255);
+    font-size: 70px;
+    
+  }
+
+  .imgtext h2{
+    display: flex;
+    position: absolute;
+    top: 20%;
+    left: 7.5%;
+    transform: translate(-35%, 8%);
+    color: rgb(255, 255, 255);
+    font-size: 70px;
+  }
+
+  .imgtext h3{
+    display: flex;
+    position: absolute; 
+    top: 30%;
+    left: 27%;
+    transform: translate(-50%, 15%);
+    color: rgb(255, 255, 255);
+    font-size: 70px;
+  }
+  .imgtext h4{
+    display: flex;
+    position: absolute; 
+    top: 60%;
+    left: 6%;
+    transform: translate(-2%, -50%);
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+  }
+  .imgtext h5{
+    display: flex;
+    position: absolute; 
+    top: 65%;
+    left: 6%;
+    transform: translate(-2%, -50%);
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+  }
+  .imgtext h6{
+    display: flex;
+    position: absolute; 
+    top: 68.5%;
+    left: 6%;
+    transform: translate(-2%, -50%);
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+  }
+
+
+  /* Animation */
+  @keyframes slide-in {
+    from {
+      transform: translateX(-300%);
+    }
+    to {
+      transform: translateX(-25%);
+    }
+  }
+  
+
+  .imgtext h1{
+    animation: slide-in .3s ease-out;
+    animation-delay: 0.6s;
+    animation-fill-mode: backwards;
+}
+.imgtext h2{
+  animation: slide-in .3s ease-out;
+  animation-delay: 0.8s;
+  animation-fill-mode: backwards;
+}
+
+.imgtext h3{
+  animation: slide-in .3s ease-out;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.imgtext h4{
+  animation: slide-up .3s ease-out;
+  animation-delay: 1.2s;
+  animation-fill-mode: backwards;
+}
+.imgtext h5{
+  animation: slide-up .3s ease-out;
+  animation-delay: 1.2s;
+  animation-fill-mode: backwards;
+}
+.imgtext h6{
+  animation: slide-up .3s ease-out;
+  animation-delay: 1.2s;
+  animation-fill-mode: backwards;
+}
+
+.home1{
+  background-color: rgb(235, 190, 190);
+  margin-top: -2.5%
+}
+/* CARD */
+.homecard {
+  animation: fade-in 2s;
+  opacity: 3;
+  border-radius: 2%;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.homecard{
+  position: relative;
+  background-color: #ffff;
+  height: 80vh;
+  width: 64%;
+  left: 20%;
+  transform: translate(-2%, -15%);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 2%;
+
+}
+
+.homecard h1{
+  padding-top: 8%;
+  padding-bottom: 4%;
+  font-size: 250%;
+
+}
+
+.homecard p{
+  padding-left: 10%;
+  padding-right: 10%;
+  font-size: 150%;
+}
+button {
+  background-color: #0077b5;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #005f91;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.Recommendations{
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-content: center;
+  text-align: center;
+  background-color: bisque;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: -1%;
+  padding-bottom: 2%;
+}
+/* search bar */
+.search-bar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.search-bar {
+  margin-top: 10%;
+  margin-bottom: 100%;
+  margin-left: -40%;
+  margin-right: -40%;
+  position: relative; 
+  display: flex; 
+  align-items: center;
+  height: 60px;
+  width: 200%;
+  max-width: 500px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-bar.focused {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
 }
+
+input[type="text"] {
+  flex: 1;
+  height: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-bar.focused input[type="text"] {
+  width: 80%;
+}
+
+button[type="submit"] {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 60px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-bar.focused button[type="submit"] {
+  transform: translateX(-50%);
+  color: #fff;
+}
+
+button[type="submit"] svg {
+  height: 24px;
+  width: 24px;
+  transition: all 0
+  .3s ease-in-out;
+}
+
+.search-bar.focused button[type="submit"] svg {
+transform: rotate(90deg);
+}
+
+@media screen and (max-width: 768px) {
+/* .search-bar-container {
+display: flex;
+flex-direction: row;
+align-items:center;
+align-content: center;
+height: auto;
+padding: 20px;
+
+} */
+.search-bar{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 150%;
+  
+}
+}
+
+.about-us {
+  background-color: #f8f8f8;
+  padding: 80px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 50px;
+}
+
+.team {
+  position: relative;
+}
+
+.team:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 2px;
+  background-color: #000;
+  transform: translate(-50%, -50%) scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.team:hover:before {
+  transform: translate(-50%, -50%) scaleX(1);
+}
+
+.team-title {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.team-members {
+  display: flex;
+  justify-content: center;
+  }
+  
+  .team-member {
+  margin: 0 20px;
+  }
+  
+  .team-member img {
+  display: block;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  }
+  
+  .team-member-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  }
+  
+  .team-member-title {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+  }
+   
+  
+/*   
+   .about-us {
+    background-color: #f8f8f8;
+    padding: 80px 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 50px;
+  }
+  
+  .description {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 50px;
+  }
+  
+  .team {
+    position: relative;
+  }
+  
+  .team:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transform: translateX(-50%) scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .team:hover:after {
+    transform: translateX(-50%) scaleX(1);
+  }
+  
+  .team-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  }
+  
+  .team-members {
+  display: flex;
+  justify-content: center;
+  }
+  
+  .team-member {
+  position: relative;
+  margin: 0 20px;
+  }
+  
+  .team-member-image {
+  overflow: hidden;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  }
+  
+  .team-member img {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 50%;
+  }
+  
+  .team-member:hover .team-member-image img {
+  transform: scale(1.1);
+  }
+  
+  .team-member-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  }
+  
+  .team-member-title {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+  }
+  
+   */
+  
+   
