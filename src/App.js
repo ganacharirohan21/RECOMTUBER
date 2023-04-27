@@ -4,6 +4,7 @@ import Navbar from './components/navbar/Navbar';
 import Homebg from './assests/home/homebg.jpg'
 import Me from './assests/Team/me.jpeg'
 import Footer from './components/footer/Footer';
+import SearchBar from './components/searchbar/Searchbar';
 
 
 function App() {
@@ -27,17 +28,33 @@ function App() {
     };
   }, []);
 
-  const [isFocused, setIsFocused] = useState(false);
-  const [query, setQuery] = useState('');
+  //  const [isFocused, setIsFocused] = useState(false);
+   const [query, setQuery] = useState('');
 
-  const handleInputChange = (e) => {
+   const handleInputChange = (e) => {
     setQuery(e.target.value);
-  };
+   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // do something with query
-  };
+   const handleSubmit = (e) => {
+     e.preventDefault();
+     // do something with query
+   };
+
+   const [videos, setVideos] = useState([]);
+
+   const handleSearch = async (query, sortBy) => {
+    const response = await fetch(
+      `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${query}&type=video&order=${sortBy}&key=YOUR_API_KEY`
+    );
+    const data = await response.json();
+    const videoData = data.items.map((item) => ({
+       id: item.id.videoId,
+       title: item.snippet.title,
+      views: Math.floor(Math.random() * 10000000), // Replace with actual view count data
+    }));
+     setVideos(videoData);
+   };
+
 
 
   return (
@@ -69,23 +86,9 @@ function App() {
       </div>
       <div className='Recommendations' id="recommendations">
         <h1>Enter the domain of your video.</h1>
-        <form onSubmit={handleSubmit} className="search-bar-container">
-          <div className={`search-bar ${isFocused ? 'focused' : ''}`}>
-            <input
-              type="text"
-              placeholder="Search..."
-              value={query}
-              onChange={handleInputChange}
-              onFocus={() => setIsFocused(true)}
-              onBlur={() => setIsFocused(false)}
-            />
-            <button type="submit">
-              <svg viewBox="0 0 24 24">
-              <path fill="currentColor" d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l4.25 4.25a1 1 0 1 0 1.42-1.42L15.5 14zm-6 0a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0z" />
-              </svg>
-            </button>
-          </div>
-        </form>
+        <div>
+          <SearchBar videos={videos} onSearch={handleSearch} />
+        </div>
       </div>
       <div className="about-us" id='about'>
           <div className="container">
@@ -102,8 +105,8 @@ function App() {
                 <p className="team-member-title">Web Developer</p>
               </div>
               <div className="team-member">
-                <img src="https://via.placeholder.com/150" alt="Team Member" />
-                <h4 className="team-member-name">Sathvika Reddy</h4>
+              <img src={ Me } alt="me" />
+                <h4 className="team-member-name">Rohan Ganachari</h4>
                 <p className="team-member-title">Machine Learning Engineer</p>
               </div>
             </div>

@@ -316,7 +316,7 @@ padding: 20px;
   position: relative;
 }
 
-.team:before {
+/* .team:before {
   content: '';
   position: absolute;
   top: 50%;
@@ -326,11 +326,7 @@ padding: 20px;
   background-color: #000;
   transform: translate(-50%, -50%) scaleX(0);
   transition: transform 0.3s ease-in-out;
-}
-
-.team:hover:before {
-  transform: translate(-50%, -50%) scaleX(1);
-}
+} */
 
 .team-title {
   font-size: 24px;
@@ -467,5 +463,7 @@ padding: 20px;
   }
   
    */
+
+
   
    
