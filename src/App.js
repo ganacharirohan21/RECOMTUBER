@@ -5,7 +5,7 @@ import Homebg from './assests/home/homebg.jpg'
 import Me from './assests/Team/me.jpeg'
 import Footer from './components/footer/Footer';
 import SearchBar from './components/searchbar/Searchbar';
-
+import TopList from './components/top/toplist';
 
 function App() {
   const [showAnimation, setShowAnimation] = useState(false);

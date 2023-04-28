@@ -19,7 +19,7 @@
         "title": "Video Title 3",
         "description": "This is the description for Video 3.",
         "views": 30000,
-        "thumbnail": "https://example.com/thumbnail3.jpg"
+        "thumbnail": "https://i.ytimg.com/vi/Pubtjn5QIjg/default.jpg"
       },
       {
         "id": "4",
@@ -37,10 +37,38 @@
       },
       {
         "id": "6",
-        "title": "dogs funny videos",
+        "title": "trying on dog costumes!! happy holidog",
         "description": "This is the description for Video 3.",
         "views": 3000,
-        "thumbnail": "https://example.com/thumbnail3.jpg"
+        "thumbnail": "https://i.ytimg.com/vi/bYpItS1jS3Y/default.jpg"
+      },
+      {
+        "id": "8",
+        "title": " tiny donkey thinks he's actually a dog  | the dodo",
+        "description": "This is the description for Video 3.",
+        "views": 300100,
+        "thumbnail": "https://i.ytimg.com/vi/MIQKlHSD89E/default.jpg"
+      },
+      {
+        "id": "9",
+        "title": "dog owners be like...",
+        "description": "This is the description for Video 3.",
+        "views": 300089,
+        "thumbnail": "https://i.ytimg.com/vi/k3uh0MJeypI/default.jpg"
+      },
+      {
+        "id": "10",
+        "title": " meet my dog",
+        "description": "This is the description for Video 3.",
+        "views": 300002,
+        "thumbnail": "https://i.ytimg.com/vi/pfM1F0fBTo8/default.jpg"
+      },
+      {
+        "id": "10",
+        "title": " meet my dog",
+        "description": "This is the description for Video 3.",
+        "views": 300000,
+        "thumbnail": "https://i.ytimg.com/vi/pfM1F0fBTo8/default.jpg"
       }
     ]
   }
